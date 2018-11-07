@@ -1,0 +1,24 @@
+
+boolean validatePin(int pin) {
+	int remainder,remainder2,count=0;
+    boolean flag = false;
+	while(pin!=0)
+	{
+		remainder=pin%10;
+		pin=pin/10;
+		remainder2=pin%10;
+		if(remainder>remainder2){
+			count++;
+		}
+	}
+       
+    if(count==4){
+		flag = true;
+    }
+    else{
+		printf("Please enter the valid pin number\n");
+		printf("Thank you for use YASH ATM\n");
+		printf("visit again\n");
+    }
+    return flag;
+}
